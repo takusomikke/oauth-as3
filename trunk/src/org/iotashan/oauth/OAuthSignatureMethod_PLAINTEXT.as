@@ -1,7 +1,5 @@
 package org.iotashan.oauth
 {
-	import org.iotashan.utils.URLEncoding;
-	
 	public class OAuthSignatureMethod_PLAINTEXT implements IOAuthSignatureMethod
 	{
 		public function OAuthSignatureMethod_PLAINTEXT()

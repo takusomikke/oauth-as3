@@ -2,9 +2,9 @@ package org.iotashan.oauth
 {
 	import flash.net.URLRequestHeader;
 	import flash.net.URLVariables;
-
+	
 	import mx.utils.UIDUtil;
-
+	
 	import org.iotashan.utils.URLEncoding;
 
 	/**
@@ -18,6 +18,10 @@ package org.iotashan.oauth
 		private var _requestParams:Object;
 		private var _consumer:OAuthConsumer;
 		private var _token:OAuthToken;
+		
+		public static const HTTP_MEHTOD_HEAD:String = "HEAD";
+		public static const HTTP_MEHTOD_GET:String = "GET";
+		public static const HTTP_MEHTOD_POST:String = "POST";
 
 		/**
 		 * Constructor method.
