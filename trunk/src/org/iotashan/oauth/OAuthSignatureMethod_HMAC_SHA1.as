@@ -33,9 +33,6 @@ package org.iotashan.oauth
                 var key:ByteArray = Hex.toArray(Hex.fromString(sSec));
                 var message:ByteArray = Hex.toArray(Hex.fromString(toBeSigned));
 
-                trace(sSec);
-                trace(toBeSigned);
-
                 var result:ByteArray = hmac.compute(key,message);
                 var ret:String = Base64.encodeByteArray(result);
                 
