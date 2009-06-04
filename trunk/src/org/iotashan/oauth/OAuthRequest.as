@@ -114,7 +114,6 @@ package org.iotashan.oauth
 		}
 
 		public static const RESULT_TYPE_URL_STRING:String = "url";
-		public static const RESULT_TYPE_URL_VARIABLES:String = "urlVariables";
 		public static const RESULT_TYPE_POST:String = "post";
 		public static const RESULT_TYPE_HEADER:String = "header";
 
@@ -148,16 +147,6 @@ package org.iotashan.oauth
 				case RESULT_TYPE_URL_STRING:
 					var ret1:String = _requestURL + "?" + getParameters();
 					return ret1;
-				break;
-				case RESULT_TYPE_URL_VARIABLES:
-					// this is possibly going to give you corrupt results, because the
-					// flash player auto-encodes URLVariables, but not according to spec
-					var ret2:URLVariables = new URLVariables();
-					for (var param:Object in _requestParams) {
-						ret2[param] = _requestParams[param];
-					}
-
-					return ret2;
 				break;
 				case RESULT_TYPE_POST:
 					var ret4:String = getParameters();

@@ -15,7 +15,7 @@ package org.iotashan.utils
 		/**
 		 * Encodes a string into a URL compliant format
 		*/
-		public static function encode(input:String):String {
+		public static function encode(input:String,usePlusForSpace:Boolean=false):String {
 			var output:String = "";
 			var i:Number = 0;
 			var exclude:RegExp = /(^[a-zA-Z0-9_\.~-]*)/;
@@ -33,7 +33,11 @@ package org.iotashan.utils
 					i += match[1].length;
 				} else {
 					if (input.substr(i,1) == " ") {
-						output += "+";
+						if (usePlusForSpace) {
+							output += "+";
+						} else {
+							output += "%20";
+						}
 					} else {
 						charCode = input.charCodeAt(i);
 						hexVal = charCode.toString(16);
