@@ -19,8 +19,8 @@ package org.iotashan.utils
 		 * Does proper UTF-8 encoding
 		 */
 		public static function utf8Encode(string:String):String {
-			string = string.replace(/rn/g,'n');
-			string = string.replace(/r/g,'n');
+			string = string.replace(/\r\n/g, '\n');
+			string = string.replace(/\r/g, '\n');
 		 
 			var utfString:String = '';
 		 
