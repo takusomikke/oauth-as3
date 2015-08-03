@@ -1,0 +1,1 @@
+Actionscript 3 library for oAuth client implementations, for use in Flash, Flex and AIR.
